@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         break;
     }
 
-    res.send({ success: true });
+    res.status(200).json({ success: true });
   } catch (error) {
     console.log(error.message);
     res.send({ success: false });
