@@ -13,7 +13,6 @@ export default function LoginForm({ setSubmitted }) {
     const { error } = await supabaseClient.auth.signInWithOtp({
       email,
       options: {
-        shouldCreateUser: false,
         emailRedirectTo: window.location.origin,
       },
     });
