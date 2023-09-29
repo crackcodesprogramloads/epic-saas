@@ -70,7 +70,13 @@ async function updateSubscription(event) {
       subscription_status,
       price,
     };
-
+    console.log({
+      name,
+      email,
+      stripe_customer_id,
+      subscription_status,
+      price,
+    });
     const response = await supabaseServer.auth.admin.createUser({
       email,
       email_confirm: true,
